@@ -1,0 +1,19 @@
+<web-app>
+    <servlet>
+        <servlet-name>MyCookie</servlet-name>
+        <servlet-class>MyCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyCookie</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyCookiel</servlet-name>
+        <servlet-class>MyCookiel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyCookiel</servlet-name>
+        <url-pattern>/cookiel</url-pattern>
+    </servlet-mapping>
+</web-app>

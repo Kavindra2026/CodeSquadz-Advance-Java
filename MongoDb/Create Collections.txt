@@ -1,0 +1,83 @@
+Part 1: MongoDB Shell Commands
+
+Creating Collections
+
+
+db.createCollection(name, options) is used to create a collection.
+Syntax
+
+The following command shows has to create a collections with createCollection() command.
+
+db.createCollection(name, options)
+
+
+name is the name of the collection. options, which is Optional, is a document and used to set up the collection.
+
+Options Table:
+Field Type Description 
+
+capped: Boolean. Optional. true value enables a capped collection. Capped collection is a fix-sized collection that overwrites its oldest entries when it reaches its maximum size.
+true value requires you to specify size parameter.
+
+
+autoIndexID: Boolean. Optional. true value creates index on _id field. Default value is false.
+
+
+size: number. Optional. Set a maximum size in bytes for a capped collection.
+
+max: number. Optional. Set the maximum number of documents allowed in the capped collection.
+
+
+Example 
+
+The Following code create a collection with default settings.
+
+> use test
+switched to db test
+> db.createCollection("mycollection1")
+{ "ok": 1 }
+>
+
+
+To check the created collection, use the command: 
+
+> show collections.
+mycollection
+system.indexes
+
+
+
+The Following example shows how to use createCollection() method with options: 
+
+> db.createCollection("emp11", { capped: true, autoIndexID: true, size: 2800, max: 10000 })
+{ "ok": 1 }
+>
+
+
+
+
+*MongoDB can create a collection automatically when inserting some document.
+
+
+
+> db.emp11.insert({"_id":1004,name:"lalu", salary: 101,"city": "delhi"})
+> show collections.
+mycol
+mycollection
+system.indexes
+
+emp
+>
+
+
+
+
+
+
+
+
+
+
+
+
+

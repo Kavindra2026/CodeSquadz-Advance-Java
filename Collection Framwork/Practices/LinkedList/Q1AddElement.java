@@ -1,0 +1,20 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Q1AddElement {
+
+    public static void main(String[] args) {
+
+        List<String> list = new LinkedList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+        list.addFirst("Start");
+        list.addLast("End");
+        list.add(4, "Middle");
+
+        System.out.println(list);
+
+    }
+}

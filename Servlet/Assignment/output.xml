@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rows>
+  <row>
+    <id>1</id>
+    <name>Kavindra Singh</name>
+    <email>kavindra@.com</email>
+  </row>
+  <row>
+    <id>2</id>
+    <name>Savej Ali</name>
+    <email>savej@.com</email>
+  </row>
+  <row>
+    <id>3</id>
+    <name>JUnaid</name>
+    <email>junaid@.com</email>
+  </row>
+</rows>

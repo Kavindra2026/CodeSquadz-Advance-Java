@@ -1,0 +1,131 @@
+Create Table 
+
+In MongoDB, both database and table are created automatically when data is inserted for the first time.
+
+We can use the use databaseName command to switch to your database even if the database itself is not created yet.
+
+In the followinffg example, afer inserting a new  record , database even if the database  "codesquadz" , and table  "user" are created on the fly.
+
+
+> use codesquadz
+switched to db codesquadz
+?
+>
+ db.users.insert({name: "codesquadz7",pass:"codesquadz2", salary: 700000,"add":"noida","college":"lulu"})
+> db.users.find()
+
+{"_id" : ObjectId("the id value"), "username" : "codesquadz", "password" : "12456" }
+
+
+show dbs -> command lists all databases. use yourDBName command switche to database 
+show collections -> command lists all tables in the current selected database.
+
+
+
+
+--------------------------------------------------------------------------------------
+
+
+
+
+CRUD Operations (Create, Read, Update, Delete)
+
+
+
+Insert -->>
+
+To insert a record, use db.yourTableName.insert({data}) or db.tablename.save({data})
+
+> db.users.save({username:"Tejul",password: "pappu4.0",salary: 101,"city": "patna"})
+> db.users.find()
+
+
+
+Update -->>
+
+ To update a record, use db.tablename.update({criteria}, {$set: {new value}}).  
+ In below example, the password of username : "codesquadz" is update.
+ 
+> db.users.update({username: "Tejul"}, {$set: {password: "keju"}})
+> db.find()
+
+
+Find -->> 
+
+To find or query records, use db.tablename.find({criteria}).
+
+List all records: 
+> db.users.find().
+
+Find record  where username is  "codesquadz"
+
+> db.users.find({name:"codesquadz7"}).
+
+Find record where username's length is less than or equal to 5.
+
+db.users.find({$where : 'this.username.length() <=5 '}}
+
+
+Exists check -->>
+Find record where username field is existed.
+db.users.find({username: {$exists: true}}).
+
+
+Remove (Delete)-->>
+To delete a record, use db.tablename.remove({criteria}).
+> db.users.remove({username: "Tejul"})
+>db.users.find()
+
+
+
+----------------------------------------------------------------------------------
+
+
+
+Indexes
+
+List all indexes of table "users", by default the column "_id" is always the primary key and 
+created automatically.
+ > db.users.getIndexes()
+ >
+ 
+
+Create index an index ,users db.tablename.ensureIndex(column).
+> db.users.ensureIndex({username:1}).
+>db.users.getIndexes()
+
+
+To drop an index, uses db. tablename. dropIndex (column) . In the following example, the index on
+column "username" is deleted.
+
+> db.users.dropIndex ({username:1}
+> db. users.getIndexes ()
+>
+
+To create an unique index, uses db. tablename.ensureIndex({column} ,{unique: true} ).
+The following code creates an unique index on column "username".
+
+> db. users.ensureIndex ({username:1}, {unique:true} ) ;
+> db.users.getIndexes()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

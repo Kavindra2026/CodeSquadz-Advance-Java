@@ -1,0 +1,23 @@
+
+<web-app>
+<context-param>
+<param-name>name1</param-name>
+<param-value>Radha Rani Sudh Ji je Humari</param-value>
+</context-param>
+<servlet>
+<servlet-name>my</servlet-name>
+<jsp-file>init.jsp</jsp-file>
+<init-param>
+<param-name>name</param-name>
+<param-value>Om shree Bhagwate Bashu devaye namha</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+<servlet-name>my</servlet-name>
+<url-pattern>run</url-pattern>
+</servlet-mapping>
+<welcome-file-list>
+<welcome-file>demo.jsp</welcome-file>
+<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+</web-app>

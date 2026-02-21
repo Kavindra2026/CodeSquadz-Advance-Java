@@ -1,0 +1,33 @@
+package mypack;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class TestAuto
+{
+    public static void main(String[] args)
+    {
+        EntityManagerFactory factory =
+            Persistence.createEntityManagerFactory("appsqldzjpa");
+
+        EntityManager manager = factory.createEntityManager();
+
+        EntityTransaction t = manager.getTransaction();
+        t.begin();
+
+        Person p1 = new Person("lalu24", "yadav24");
+        Person p2 = new Person("rabari25", "yadav25");
+
+        System.out.println("persisting entities...");
+        manager.persist(p1);
+        manager.persist(p2);
+
+        t.commit();
+        manager.close();
+        factory.close();
+
+        System.out.println("Successfully persisted.");
+    }
+}

@@ -1,0 +1,1 @@
+set classpath=D:\CodeSquadz-Advance-Java\Spring\allspringjar\spring-2.5.jar;D:\CodeSquadz-Advance-Java\Spring\allspringjar\org-apache-commons-logging.jar;

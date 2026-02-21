@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Information Form</title>
+</head>
+<body>
+
+    <h1>Please enter your information</h1>
+
+    <form method="POST" action="/submit-handler">
+
+        <p>
+            <label for="title">Title:</label>
+            <select id="title" name="title">
+                <option>Mr</option>
+                <option>Mrs</option>
+                <option>Miss</option>
+                <option>Ms</option>
+                <option>Other</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" size="20">
+        </p>
+
+        <p>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" size="20">
+        </p>
+
+        <p>
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" size="20">
+        </p>
+
+        <p>
+            <label for="tel">Telephone:</label>
+            <input type="text" id="tel" name="tel" size="20">
+        </p>
+
+        <fieldset>
+            <legend>Please inform us of your interests:</legend>
+            <input type="checkbox" id="sport" name="interests" value="Sport">
+            <label for="sport">Sport</label><br>
+            <input type="checkbox" id="music" name="interests" value="Music">
+            <label for="music">Music</label><br>
+            <input type="checkbox" id="reading" name="interests" value="Reading">
+            <label for="reading">Reading</label><br>
+            <input type="checkbox" id="film" name="interests" value="TV and Film">
+            <label for="film">TV and Film</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Your age:</legend>
+            <input type="radio" id="age1" name="age" value="25orless" checked>
+            <label for="age1">Less than 25</label><br>
+            <input type="radio" id="age2" name="age" value="26to40">
+            <label for="age2">26-40</label><br>
+            <input type="radio" id="age3" name="age" value="41to65">
+            <label for="age3">41-65</label><br>
+            <input type="radio" id="age4" name="age" value="over65">
+            <label for="age4">Over 65</label>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+
+    </form>
+
+</body>
+</html>

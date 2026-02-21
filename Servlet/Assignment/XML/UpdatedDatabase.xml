@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Database>
+    <student>
+        <id>2</id>
+        <name>Sita</name>
+        <phone>12345678</phone>
+        <subject>mern stack</subject>
+    </student>
+    <student>
+        <id>3</id>
+        <name>Radha</name>
+        <phone>12345678</phone>
+        <subject>mean stack</subject>
+    </student>
+    <student>
+        <id>4</id>
+        <name>Ram</name>
+        <phone>12345678</phone>
+        <subject>mean stack</subject>
+    </student>
+    <student>
+        <id>1</id>
+        <name>Krishna</name>
+        <phone>12345678</phone>
+        <subject>java full stack</subject>
+    </student>
+</Database>

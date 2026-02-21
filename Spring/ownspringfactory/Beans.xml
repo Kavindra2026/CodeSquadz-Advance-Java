@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE Beans SYSTEM "Beans.dtd">
+<Beans>
+    <MyBean>
+        <Bean_id>refId</Bean_id>
+        <Bean_Class_Name>Student</Bean_Class_Name>
+    </MyBean>
+</Beans>

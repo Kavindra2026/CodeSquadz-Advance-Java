@@ -1,0 +1,23 @@
+<persistence>
+<persistence-unit name="appsqldzjpa" transaction-type="RESOURCE_LOCAL">
+    <class>mypack.Student</class>
+    <class>mypack.Address</class>
+
+    <properties>
+        <property name="javax.persistence.jdbc.url"
+                  value="jdbc:oracle:thin:@localhost:1521:XE"/>
+        <property name="javax.persistence.jdbc.user" value="jpa"/>
+        <property name="javax.persistence.jdbc.password" value="jpa"/>
+        <property name="javax.persistence.jdbc.driver"
+                  value="oracle.jdbc.driver.OracleDriver"/>
+
+        <property name="eclipselink.logging.level" value="FINE"/>
+        <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+</persistence-unit>
+</persistence>
+<!-- 🔹 Short Explanation
+
+Entity classes register hoti hain
+
+Table auto-create hoti hai -->
